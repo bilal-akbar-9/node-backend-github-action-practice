@@ -9,7 +9,11 @@ const taskSchema = new mongoose.Schema(
 		category: {
 			type: String,
 			required: true,
-		},
+        },
+        discription: {
+            type: String,
+            required: true,
+        },
 		completed: {
 			type: Boolean,
 			default: false,
@@ -19,6 +23,14 @@ const taskSchema = new mongoose.Schema(
 			ref: "User",
 			required: true,
 		},
+		priority: {
+			type: String,
+			required: true,
+        },
+        dueDate: {
+            type: Date,
+            required: true,
+        },
 	},
 	{
 		timestamps: true,
